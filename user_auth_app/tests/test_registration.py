@@ -14,7 +14,7 @@ class RegistrationTests(APITestCase):
 
     def test_post_registration_success(self):
         """
-        Tests successful user registration with unique credentials.
+        Tests happy user registration with unique credentials.
         """
         unique_username = f"user_{uuid.uuid4().hex[:8]}"
         unique_email = f"email_{uuid.uuid4().hex[:8]}@example.com"
@@ -36,7 +36,7 @@ class RegistrationTests(APITestCase):
 
 class NegativeRegistrationTests(APITestCase):
     """
-    Tests for unsuccessful user registration scenarios.
+    Tests for unhappy user registration scenarios.
     """
     def setUp(self):
         self.client = APIClient()
