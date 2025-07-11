@@ -5,7 +5,7 @@ class ChatSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Chat
-        exclude = ("id")
+        exclude = ("id",)
         read_only_fields = [
             "author"
         ]

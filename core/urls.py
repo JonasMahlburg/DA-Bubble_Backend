@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from messenger_app.api.urls import router as messenger_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-      path('api/', include('user_auth_app.api.urls')),
+    path('api/', include('user_auth_app.api.urls')),
+    path('api/', include(messenger_router.urls)),
 
 ]
